@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  yocto-build-env:
+    build: yocto-build-env
+    privileged: true
+    tmpfs:
+      - /tmp
+      - /run
+    volumes:
+      - work:/work
+      - docker:/var/lib/docker
+
+volumes:
+  work: {}
+  docker: {}

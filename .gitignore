@@ -1,0 +1,10 @@
+# .gitignore
+
+# Ignore all log files
+*.log
+
+# Ignore all temporary files
+*~
+
+# Ignore Docker env files
+.env
