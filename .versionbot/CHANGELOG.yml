@@ -1,0 +1,22 @@
+- commits:
+    - subject: Remove yocto scripts from Dockerfile
+      hash: 1232fa2e59b61174135addc314fb20fd605913c9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Create LICENSE
+      hash: 1d68021cf7d2b8cba2c4928ff3163ae34357e032
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 0.0.2
+  title: ""
+  date: 2023-11-15T15:25:48.656Z
