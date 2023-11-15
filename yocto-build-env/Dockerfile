@@ -63,8 +63,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 VOLUME /var/lib/docker
 
 # Install balena-cli
-ARG BALENA_CLI_VERSION 14.5.15
-RUN curl -sSL https://github.com/balena-io/balena-cli/releases/download/v$BALENA_CLI_VERSION/balena-cli-v$BALENA_CLI_VERSION-linux-x64-standalone.zip > balena-cli.zip && \
+# renovate: datasource=github-releases depName=balena-io/balena-cli
+ARG BALENA_CLI_VERSION v14.5.15
+RUN curl -sSL https://github.com/balena-io/balena-cli/releases/download/$BALENA_CLI_VERSION/balena-cli-$BALENA_CLI_VERSION-linux-x64-standalone.zip > balena-cli.zip && \
     unzip balena-cli.zip && \
     mv balena-cli/* /usr/bin && \
     rm -rf balena-cli.zip balena-cli
