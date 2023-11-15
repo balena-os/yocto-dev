@@ -22,53 +22,57 @@ ENV LANG en_US.UTF-8
 # Additional host packages required by balena
 # hadolint ignore=DL3008
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-    apt-transport-https iptables iproute2 procps uidmap && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y --no-install-recommends apt-transport-https ca-certificates curl git gnupg lsb-release sudo uidmap \
+    && rm -rf /var/lib/apt/lists/*
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN curl --silent https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 
-ARG NODE_VERSION node_8.x
-ARG DISTRO bionic
+ARG NODE_VERSION=node_8.x
 
-RUN echo "deb https://deb.nodesource.com/$NODE_VERSION $DISTRO main" | tee /etc/apt/sources.list.d/nodesource.list \
-    && echo "deb-src https://deb.nodesource.com/$NODE_VERSION $DISTRO main" | tee -a /etc/apt/sources.list.d/nodesource.list
+RUN echo "deb https://deb.nodesource.com/$NODE_VERSION $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/nodesource.list \
+    && echo "deb-src https://deb.nodesource.com/$NODE_VERSION $(lsb_release -cs) main" | tee -a /etc/apt/sources.list.d/nodesource.list
 
 # hadolint ignore=DL3008
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    jq nodejs sudo && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends jq nodejs \
+    && rm -rf /var/lib/apt/lists/*
 
 # Additional host packages required by various BSP layers
 # hadolint ignore=DL3008
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    dos2unix && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends dos2unix \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install docker matching the balena-engine version
 # https://docs.docker.com/engine/install/ubuntu/
 # hadolint ignore=DL3008
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    iptables procps e2fsprogs xfsprogs xz-utils git kmod apt-transport-https ca-certificates curl gnupg lsb-release && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends iptables procps e2fsprogs xfsprogs xz-utils kmod \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
-    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 ARG DOCKER_VERSION="5:19.03.13~3-0~ubuntu-bionic"
 
 # hadolint ignore=DL3008
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    docker-ce=${DOCKER_VERSION} docker-ce-cli=${DOCKER_VERSION} containerd.io && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends docker-ce=${DOCKER_VERSION} docker-ce-cli=${DOCKER_VERSION} containerd.io \
+    && rm -rf /var/lib/apt/lists/*
 
 VOLUME /var/lib/docker
 
 # Install balena-cli
 # renovate: datasource=github-releases depName=balena-io/balena-cli
-ARG BALENA_CLI_VERSION v14.5.15
-RUN curl -sSL https://github.com/balena-io/balena-cli/releases/download/$BALENA_CLI_VERSION/balena-cli-$BALENA_CLI_VERSION-linux-x64-standalone.zip > balena-cli.zip && \
-    unzip balena-cli.zip && \
-    mv balena-cli/* /usr/bin && \
-    rm -rf balena-cli.zip balena-cli
+ARG BALENA_CLI_VERSION=v14.5.15
+
+RUN curl -fsSL https://github.com/balena-io/balena-cli/releases/download/$BALENA_CLI_VERSION/balena-cli-$BALENA_CLI_VERSION-linux-x64-standalone.zip > balena-cli.zip && \
+    unzip balena-cli.zip \
+    && mv balena-cli/* /usr/bin \
+    && rm -rf balena-cli.zip balena-cli
 
 WORKDIR /work
 
