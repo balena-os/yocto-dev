@@ -45,9 +45,6 @@ RUN curl -sSL https://github.com/balena-io/balena-cli/releases/download/v$BALENA
     mv balena-cli/* /usr/bin && \
     rm -rf balena-cli.zip balena-cli
 
-COPY include/balena-docker.inc /
-COPY entry_scripts/prepare-and-start.sh /
-
 WORKDIR /work
 
 CMD [ "sleep", "infinity" ]
