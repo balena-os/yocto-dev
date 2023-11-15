@@ -1,4 +1,18 @@
 - commits:
+    - subject: Disable blanket automerge rule
+      hash: 16f9e0a5121b99563dbb8c5d32d147612b2b0c3d
+      body: |
+        Specific updateType automerge settings should be inherited
+        from balena-io/renovate-config.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 0.0.6
+  title: ""
+  date: 2023-11-15T19:44:18.498Z
+- commits:
     - subject: Update balena-io/balena-cli to v17
       hash: 6487cc3718a6987611294538669afdc041f10056
       body: |
