@@ -1,4 +1,18 @@
 - commits:
+    - subject: Enable renovate for the balena CLI version
+      hash: 10aa748673b654e6106890d3435764334dca4fe6
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.3
+  title: ""
+  date: 2023-11-15T16:29:49.104Z
+- commits:
     - subject: Remove yocto scripts from Dockerfile
       hash: 1232fa2e59b61174135addc314fb20fd605913c9
       body: ""
