@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v17.4.3
+      hash: f7442b179133f452a99ccdd2dc98748cb3439270
+      body: |
+        Update balena-io/balena-cli from 17.4.2 to 17.4.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 0.0.7
+  title: ""
+  date: 2023-11-17T15:47:37.271Z
+- commits:
     - subject: Disable blanket automerge rule
       hash: 16f9e0a5121b99563dbb8c5d32d147612b2b0c3d
       body: |
