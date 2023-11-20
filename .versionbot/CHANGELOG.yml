@@ -1,4 +1,18 @@
 - commits:
+    - subject: Install s6-overlay to run docker as a background service
+      hash: ef7919c84ecc56997dc90708d8fbbce6a0b69742
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.8
+  title: ""
+  date: 2023-11-20T15:36:40.957Z
+- commits:
     - subject: Update balena-io/balena-cli to v17.4.3
       hash: f7442b179133f452a99ccdd2dc98748cb3439270
       body: |
