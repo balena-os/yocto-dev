@@ -74,6 +74,20 @@ RUN curl -fsSL https://github.com/balena-io/balena-cli/releases/download/$BALENA
     && mv balena-cli/* /usr/bin \
     && rm -rf balena-cli.zip balena-cli
 
+# renovate: datasource=github-releases depName=just-containers/s6-overlay
+ARG S6_OVERLAY_VERSION=3.1.4.2
+
+ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-noarch.tar.xz /tmp
+RUN tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz
+ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-x86_64.tar.xz /tmp
+RUN tar -C / -Jxpf /tmp/s6-overlay-x86_64.tar.xz
+
+ENV S6_KEEP_ENV 1
+ENV S6_READ_ONLY_ROOT 1
+
+# install s6-overlay
+COPY s6-overlay /etc/s6-overlay
+
 WORKDIR /work
 
-CMD [ "sleep", "infinity" ]
+ENTRYPOINT [ "/init" ]
