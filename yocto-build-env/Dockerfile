@@ -3,7 +3,7 @@
 
 FROM ubuntu:18.04
 
-ARG DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install the following utilities (required by poky)
 # hadolint ignore=DL3008
@@ -88,6 +88,17 @@ ENV S6_READ_ONLY_ROOT 1
 # install s6-overlay
 COPY s6-overlay /etc/s6-overlay
 
+RUN adduser --disabled-password --gecos "" --uid 1000 nonroot \
+    && usermod -aG sudo nonroot \
+    && usermod -aG docker nonroot \
+    && echo "%sudo   ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers \
+    && echo "Defaults env_keep += \"DEBIAN_FRONTEND\"" >> /etc/sudoers
+
 WORKDIR /work
+
+RUN chown -R nonroot:nonroot /work
+
+# do not switch to nonroot for s6-overlay
+# see https://github.com/just-containers/s6-overlay#user-directive
 
 ENTRYPOINT [ "/init" ]
