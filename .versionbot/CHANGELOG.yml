@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add nonroot user with passwordless sudo
+      hash: 831c08b4c4265f77cae5911b1e1d7587eb780023
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.9
+  title: ""
+  date: 2023-11-20T16:10:07.629Z
+- commits:
     - subject: Install s6-overlay to run docker as a background service
       hash: ef7919c84ecc56997dc90708d8fbbce6a0b69742
       body: ""
