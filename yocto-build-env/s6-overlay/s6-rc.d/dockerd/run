@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-set -ae
+set -euo pipefail
 
-[[ ${VERBOSE,,} =~ true|yes|on|1 ]] && set -x
+[[ ${VERBOSE:-,,} =~ true|yes|on|1 ]] && set -x
 
 DOCKER_REGISTRY_MIRROR_INTERNAL=${DOCKER_REGISTRY_MIRROR_INTERNAL:-""}
 DOCKER_REGISTRY_MIRROR=${DOCKER_REGISTRY_MIRROR:-""}
@@ -25,4 +25,4 @@ if [ -n "${DOCKER_REGISTRY_MIRROR}" ]; then
 fi
 
 # shellcheck disable=SC2086
-exec dockerd "${dockerd_args[@]}" ${EXTRA_DOCKERD_ARGS} 2>&1
+exec dockerd "${dockerd_args[@]}" ${EXTRA_DOCKERD_ARGS:-} 2>&1

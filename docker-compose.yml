@@ -4,13 +4,17 @@ services:
   yocto-build-env:
     build: yocto-build-env
     privileged: true
+    ports:
+      - 22:22
     tmpfs:
       - /tmp
       - /run
     volumes:
-      - work:/work
+      - home:/home
       - docker:/var/lib/docker
+      - ssh:/etc/ssh
 
 volumes:
-  work: {}
+  home: {}
   docker: {}
+  ssh: {}

@@ -22,7 +22,7 @@ ENV LANG en_US.UTF-8
 # Additional host packages required by balena
 # hadolint ignore=DL3008
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends apt-transport-https ca-certificates curl git gnupg lsb-release sudo uidmap \
+    && apt-get install -y --no-install-recommends apt-transport-https ca-certificates curl git gnupg lsb-release openssh-server sudo uidmap \
     && rm -rf /var/lib/apt/lists/*
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -84,21 +84,17 @@ RUN tar -C / -Jxpf /tmp/s6-overlay-x86_64.tar.xz
 
 ENV S6_KEEP_ENV 1
 ENV S6_READ_ONLY_ROOT 1
+ENV S6_CMD_WAIT_FOR_SERVICES_MAXTIME 0
 
 # install s6-overlay
 COPY s6-overlay /etc/s6-overlay
+RUN chmod +x /etc/s6-overlay/scripts/*
 
-RUN adduser --disabled-password --gecos "" --uid 1000 nonroot \
-    && usermod -aG sudo nonroot \
-    && usermod -aG docker nonroot \
-    && echo "%sudo   ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers \
+# allow sudo without password
+RUN echo "%sudo   ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers \
     && echo "Defaults env_keep += \"DEBIAN_FRONTEND\"" >> /etc/sudoers
 
-WORKDIR /work
-
-RUN chown -R nonroot:nonroot /work
-
-# do not switch to nonroot for s6-overlay
-# see https://github.com/just-containers/s6-overlay#user-directive
+VOLUME /home
+VOLUME /etc/ssh
 
 ENTRYPOINT [ "/init" ]
