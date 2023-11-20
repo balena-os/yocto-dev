@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v17.4.4
+      hash: f430404e216a6fbe259294736478802b538a2b9f
+      body: |
+        Update balena-io/balena-cli from 17.4.3 to 17.4.4
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 0.0.10
+  title: ""
+  date: 2023-11-20T18:42:13.229Z
+- commits:
     - subject: Add nonroot user with passwordless sudo
       hash: 831c08b4c4265f77cae5911b1e1d7587eb780023
       body: ""
