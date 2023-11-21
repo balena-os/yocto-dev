@@ -1,4 +1,18 @@
 - commits:
+    - subject: Hardcode the UIDs for each user so they cannot change
+      hash: 84e6e137a645fc5663734e815ccece2a2563fe7c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.12
+  title: ""
+  date: 2023-11-21T21:18:13.223Z
+- commits:
     - subject: Create users and run ssh server
       hash: 22eef76aacd08868fb2975bd66ac873552991609
       body: ""
