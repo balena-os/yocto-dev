@@ -5,11 +5,13 @@ set -euo pipefail
 [[ ${VERBOSE:-,,} =~ true|yes|on|1 ]] && set -x
 
 mkdir -p /run/sshd
+mkdir -p /shared/logs
 
 ssh-keygen -A
 
-# run sshd in the foreground
-/usr/sbin/sshd -De \
+# run sshd in the foreground and format the logs such
+# that fail2ban can parse them
+exec /usr/sbin/sshd -De \
     -o "LogLevel=${SSHD_LOG_LEVEL:-INFO}" \
     -o PermitRootLogin=no \
     -o PasswordAuthentication=no \
@@ -17,4 +19,8 @@ ssh-keygen -A
     -o UsePAM=yes \
     -o AcceptEnv="LANG LC_*" \
     -o PrintMotd=no \
-    -o Banner=none
+    -o Banner=none \
+    2>&1 |
+    while IFS= read -r line; do
+        echo "$(date '+%b %d %H:%M:%S') $HOSTNAME sshd[$$]: $line"
+    done | tee /shared/logs/sshd.log

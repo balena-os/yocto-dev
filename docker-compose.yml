@@ -13,8 +13,25 @@ services:
       - home:/home
       - docker:/var/lib/docker
       - ssh:/etc/ssh
+      - shared:/shared
+
+  fail2ban:
+    build: fail2ban
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - fail2ban:/data
+      - shared:/shared:ro
+    environment:
+      F2B_LOG_TARGET: STDOUT
+      F2B_LOG_LEVEL: INFO
+      F2B_DB_PURGE_AGE: 1d
 
 volumes:
   home: {}
   docker: {}
   ssh: {}
+  shared: {}
+  fail2ban: {}
