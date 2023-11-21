@@ -1,4 +1,18 @@
 - commits:
+    - subject: Create users and run ssh server
+      hash: 22eef76aacd08868fb2975bd66ac873552991609
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.11
+  title: ""
+  date: 2023-11-21T15:01:05.467Z
+- commits:
     - subject: Update balena-io/balena-cli to v17.4.4
       hash: f430404e216a6fbe259294736478802b538a2b9f
       body: |
