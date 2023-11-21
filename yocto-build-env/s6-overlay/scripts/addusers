@@ -4,7 +4,18 @@ set -euo pipefail
 
 [[ ${VERBOSE:-,,} =~ true|yes|on|1 ]] && set -x
 
-GH_HANDLES="${GH_HANDLES:-alexgg klutchell jakogut mtoman floion acostach majorz lmbarros}"
+# We aren't preserving /etc/passwd so hardcode the ids so they cannot change between runs.
+# The usernames should match GitHub handles for fetching public SSH keys.
+user_ids="
+    acostach:1000
+    alexgg:1001
+    floion:1002
+    jakogut:1003
+    klutchell:1004
+    lmbarros:1005
+    majorz:1006
+    mtoman:1007
+"
 
 fetch_ssh_keys() {
     local _username="${1}"
@@ -15,25 +26,25 @@ fetch_ssh_keys() {
         curl -fsSL "https://github.com/${_username}.keys" >>.ssh/authorized_keys
         chown -R "${_username}:${_username}" .ssh
         chmod -R 700 .ssh
+        echo "Added $(wc -l <.ssh/authorized_keys) SSH keys for ${_username}"
     )
 }
 
-for username in ${GH_HANDLES:-}; do
-    home="$(eval echo ~"${username}")"
+# set the defaults for useradd/adduser
+useradd -D --shell /bin/bash --base-dir /home
 
-    if [ -d "${home}" ]; then
-        # create the user with the same uid as the existing home directory
-        uid="$(stat -c "%u" "${home}")"
-        adduser --disabled-password --gecos "${username}" "${username}" --uid "${uid}"
-    else
-        # create a new user and home directory
-        adduser --disabled-password --gecos "${username}" "${username}"
-    fi
+for user_id in ${user_ids}; do
 
-    # add the user to the sudo and docker groups
-    usermod -aG sudo "${username}" || true
-    usermod -aG docker "${username}" || true
+    # split the user_id into username and uid
+    name="${user_id%%:*}"
+    uid="${user_id##*:}"
+
+    echo "Creating user ${name}..."
+
+    # create a new user and home directory
+    useradd "${name}" --comment "${name}" --create-home --groups sudo,docker --uid "${uid}"
+    id "${name}"
 
     # fetch the user's ssh keys from github
-    fetch_ssh_keys "${username}" "${home}" || true
+    fetch_ssh_keys "${name}" "$(eval echo ~"${name}")" || true
 done
