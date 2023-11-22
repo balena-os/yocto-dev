@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+[[ ${VERBOSE:-,,} =~ true|yes|on|1 ]] && set -x
+
+LOCKFILE=/tmp/balena/updates.lock
+
+while true; do
+    (
+        # check for active sessions
+        while last | grep -q "still logged in"; do
+
+            # create the lockfile
+            touch $LOCKFILE
+
+            # create a file descriptor over the given lockfile
+            exec {fd}<>${LOCKFILE}
+
+            # request an exclusive lock in non-blocking mode
+            flock -n $fd || exit 0
+
+            echo "Updates are locked while sessions are active..."
+            last | grep "still logged in"
+
+            # wait 30 seconds before checking again
+            # updates are locked during this time
+            sleep 30
+
+        done
+    )
+
+    # remove the lockfile (this should be unecessary?)
+    rm -f $LOCKFILE
+
+    # wait 5 seconds before checking again
+    # updates are unlocked during this time
+    sleep 5
+done
