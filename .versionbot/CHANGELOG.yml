@@ -1,4 +1,18 @@
 - commits:
+    - subject: Rotate sshd logs with s6-log
+      hash: c376685ae1a52bb270a548096950854ad327f7f1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.15
+  title: ""
+  date: 2023-11-22T19:37:01.459Z
+- commits:
     - subject: Ban IPs via DOCKER-USER chain
       hash: afeec2c3886b33879a6fae8831665f516aa55434
       body: ""
