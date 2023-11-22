@@ -5,15 +5,12 @@ Shared Yocto development environment
 ## Features
 
 - Yocto and OpenEmbedded build dependencies based on Ubuntu 18.04
-- SSH daemon background service w/ rotating logs
+- SSH daemon service w/ rotating logs
 - Fail2ban blocking IPs after failed login attempts
-- Docker daemon background service
+- Docker daemon service
 - Per-user home directories
 - Per-user SSH authorized keys synced with GitHub profiles
-
-## Planned Features
-
-- Update locking
+- Supervisor update locking for active SSH sessions
 
 ## Administration
 
