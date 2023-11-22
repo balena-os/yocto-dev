@@ -1,4 +1,18 @@
 - commits:
+    - subject: Create update locks for logged in sessions
+      hash: 76c718976de152f58b5d11a18f7bb750f154e2f8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.17
+  title: ""
+  date: 2023-11-22T20:35:22.183Z
+- commits:
     - subject: Update README
       hash: 7d91250c515548cc875c8ff4a728967b5430f530
       body: ""
