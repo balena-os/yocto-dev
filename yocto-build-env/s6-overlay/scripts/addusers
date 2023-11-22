@@ -48,3 +48,10 @@ for user_id in ${user_ids}; do
     # fetch the user's ssh keys from github
     fetch_ssh_keys "${name}" "$(eval echo ~"${name}")" || true
 done
+
+if [ -n "${SET_HOSTNAME:-}" ]; then
+    # set the desired hostname
+    echo "${SET_HOSTNAME}" > /etc/hostname
+    hostname -F /etc/hostname
+    hostname
+fi
