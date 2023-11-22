@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update README
+      hash: 7d91250c515548cc875c8ff4a728967b5430f530
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.16
+  title: ""
+  date: 2023-11-22T19:42:18.361Z
+- commits:
     - subject: Rotate sshd logs with s6-log
       hash: c376685ae1a52bb270a548096950854ad327f7f1
       body: ""
