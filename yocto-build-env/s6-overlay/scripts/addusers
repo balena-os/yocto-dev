@@ -42,7 +42,7 @@ for user_id in ${user_ids}; do
     echo "Creating user ${name}..."
 
     # create a new user and home directory
-    useradd "${name}" --comment "${name}" --create-home --groups sudo,docker --uid "${uid}"
+    useradd "${name}" --comment "${name}" --create-home --groups sudo,docker --uid "${uid}" || true
     id "${name}"
 
     # fetch the user's ssh keys from github
