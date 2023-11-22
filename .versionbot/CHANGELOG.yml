@@ -1,4 +1,18 @@
 - commits:
+    - subject: Run fail2ban service sidecar with sshd jail
+      hash: 872e6de0065f655a0abf46528ff83fe1ac1fd809
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.13
+  title: ""
+  date: 2023-11-22T17:24:12.504Z
+- commits:
     - subject: Hardcode the UIDs for each user so they cannot change
       hash: 84e6e137a645fc5663734e815ccece2a2563fe7c
       body: ""
