@@ -8,17 +8,11 @@ LOCKFILE=/tmp/balena/updates.lock
 
 while true; do
     (
+        # request an exclusive lock in non-blocking mode
+        flock -n 200 || exit 0
+
         # check for active sessions
         while last | grep -q "still logged in"; do
-
-            # create the lockfile
-            touch $LOCKFILE
-
-            # create a file descriptor over the given lockfile
-            exec {fd}<>${LOCKFILE}
-
-            # request an exclusive lock in non-blocking mode
-            flock -n $fd || exit 0
 
             echo "Updates are locked while sessions are active..."
             last | grep "still logged in"
@@ -26,11 +20,11 @@ while true; do
             # wait 30 seconds before checking again
             # updates are locked during this time
             sleep 30
-
         done
-    )
+    ) 200>$LOCKFILE
 
-    # remove the lockfile (this should be unecessary?)
+    # remove the lockfile
+    # FIXME: why is this required when the lock is already released?
     rm -f $LOCKFILE
 
     # wait 5 seconds before checking again
