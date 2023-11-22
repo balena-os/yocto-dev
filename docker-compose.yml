@@ -15,6 +15,8 @@ services:
       - ssh:/etc/ssh
       - shared:/shared
 
+  # https://github.com/crazy-max/docker-fail2ban
+  # https://hub.docker.com/r/crazymax/fail2ban/
   fail2ban:
     build: fail2ban
     network_mode: host
@@ -22,7 +24,7 @@ services:
       - NET_ADMIN
       - NET_RAW
     volumes:
-      - fail2ban:/data
+      - fail2ban:/data/db
       - shared:/shared:ro
     environment:
       F2B_LOG_TARGET: STDOUT
