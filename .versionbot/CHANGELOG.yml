@@ -1,4 +1,18 @@
 - commits:
+    - subject: Ban IPs via DOCKER-USER chain
+      hash: afeec2c3886b33879a6fae8831665f516aa55434
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.14
+  title: ""
+  date: 2023-11-22T18:34:34.238Z
+- commits:
     - subject: Run fail2ban service sidecar with sshd jail
       hash: 872e6de0065f655a0abf46528ff83fe1ac1fd809
       body: ""
