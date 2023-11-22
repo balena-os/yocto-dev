@@ -13,7 +13,7 @@ services:
       - home:/home
       - docker:/var/lib/docker
       - ssh:/etc/ssh
-      - shared:/shared
+      - sshd-logs:/var/log/sshd:rw
 
   # https://github.com/crazy-max/docker-fail2ban
   # https://hub.docker.com/r/crazymax/fail2ban/
@@ -25,7 +25,7 @@ services:
       - NET_RAW
     volumes:
       - fail2ban:/data/db
-      - shared:/shared:ro
+      - sshd-logs:/var/log/sshd:ro
     environment:
       F2B_LOG_TARGET: STDOUT
       F2B_LOG_LEVEL: INFO
@@ -35,5 +35,5 @@ volumes:
   home: {}
   docker: {}
   ssh: {}
-  shared: {}
+  sshd-logs: {}
   fail2ban: {}
