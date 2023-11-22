@@ -1,4 +1,18 @@
 - commits:
+    - subject: Enable setting a hostname after creating users
+      hash: 514c0a764e1f172a76bc6d4084ff09d7be306598
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.18
+  title: ""
+  date: 2023-11-22T21:19:14.610Z
+- commits:
     - subject: Create update locks for logged in sessions
       hash: 76c718976de152f58b5d11a18f7bb750f154e2f8
       body: ""
