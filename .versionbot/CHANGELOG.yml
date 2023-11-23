@@ -1,4 +1,18 @@
 - commits:
+    - subject: Reduce verbosity of locked logs and increase retry to 10s
+      hash: 36fd1fc98bf0d4fe1b998c023c2e8f8271b9c8d0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.0.20
+  title: ""
+  date: 2023-11-23T18:17:06.972Z
+- commits:
     - subject: Handle errors when users already exist
       hash: e71ae3fa760ddc4b8d3f2070c343a1de531c426a
       body: |
