@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v17.4.5
+      hash: 0c83082ec727dc248960fb212083cf052cf0f7b1
+      body: |
+        Update balena-io/balena-cli from 17.4.4 to 17.4.5
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 0.0.21
+  title: ""
+  date: 2023-12-04T14:51:27.489Z
+- commits:
     - subject: Reduce verbosity of locked logs and increase retry to 10s
       hash: 36fd1fc98bf0d4fe1b998c023c2e8f8271b9c8d0
       body: ""
