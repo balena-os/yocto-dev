@@ -8,8 +8,12 @@ DOCKER_REGISTRY_MIRROR_INTERNAL=${DOCKER_REGISTRY_MIRROR_INTERNAL:-""}
 DOCKER_REGISTRY_MIRROR=${DOCKER_REGISTRY_MIRROR:-""}
 
 sysctl -w user.max_user_namespaces=15000 || true
+update-alternatives --set iptables /usr/sbin/iptables-legacy
 
 dockerd_args=()
+
+dockerd_args+=("--dns=1.1.1.1")
+dockerd_args+=("--mtu=$(cat /sys/class/net/"$(ip route get 1.1.1.1 | awk '{ print $5 }')"/mtu)")
 
 for registry in ${DOCKER_REGISTRY_MIRROR_INTERNAL}; do
   dockerd_args+=("--insecure-registry=${registry}")
