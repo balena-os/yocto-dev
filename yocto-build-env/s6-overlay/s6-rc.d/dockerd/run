@@ -6,15 +6,10 @@ set -euo pipefail
 
 DOCKER_REGISTRY_MIRROR_INTERNAL=${DOCKER_REGISTRY_MIRROR_INTERNAL:-""}
 DOCKER_REGISTRY_MIRROR=${DOCKER_REGISTRY_MIRROR:-""}
-MAX_CONCURRENT_DOWNLOADS=${MAX_CONCURRENT_DOWNLOADS:-3}
-MAX_CONCURRENT_UPLOADS=${MAX_CONCURRENT_UPLOADS:-5}
 
 sysctl -w user.max_user_namespaces=15000 || true
 
 dockerd_args=()
-dockerd_args+=("--mtu=$(cat /sys/class/net/"$(ip route get 8.8.8.8 | awk '{ print $5 }')"/mtu)")
-dockerd_args+=("--max-concurrent-downloads=${MAX_CONCURRENT_DOWNLOADS}")
-dockerd_args+=("--max-concurrent-uploads=${MAX_CONCURRENT_UPLOADS}")
 
 for registry in ${DOCKER_REGISTRY_MIRROR_INTERNAL}; do
   dockerd_args+=("--insecure-registry=${registry}")
