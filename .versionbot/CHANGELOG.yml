@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v17.4.6
+      hash: ef2725f054e62689b87e2ae758cff9f58d39e301
+      body: |
+        Update balena-io/balena-cli from 17.4.5 to 17.4.6
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 0.0.23
+  title: ""
+  date: 2023-12-08T16:52:17.036Z
+- commits:
     - subject: "yocto-build-env/Dockerfile: Install extra HOSTTOOLS"
       hash: cf412e5ccf08a706bb00baba0652d5a3845e3c63
       body: >
