@@ -15,6 +15,7 @@ user_ids="
     lmbarros:1005
     majorz:1006
     mtoman:1007
+    kb2ma:1008
 "
 
 fetch_ssh_keys() {
