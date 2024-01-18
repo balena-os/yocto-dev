@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v17.4.12
+      hash: bb2f0bb288e2180cf438dd463a4d8a1c054e62e2
+      body: |
+        Update balena-io/balena-cli from 17.4.11 to 17.4.12
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 0.0.27
+  title: ""
+  date: 2024-01-18T11:42:43.486Z
+- commits:
     - subject: Add Ken as user on misc
       hash: e05f8d2e7b7554e12513e35bfd22810ccaa3f712
       body: ""
