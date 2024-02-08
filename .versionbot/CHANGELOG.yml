@@ -1,4 +1,19 @@
 - commits:
+    - subject: "addusers: Add Ryan to users"
+      hash: 57d78db23d3d40af6c2e47fdfafdf5645adeb76a
+      body: |
+        This is needed for building and sharing OS images
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru
+      nested: []
+  version: 0.0.31
+  title: ""
+  date: 2024-02-08T18:58:52.532Z
+- commits:
     - subject: Update balena-io/balena-cli to v18
       hash: b9cb68cbe1f5ac0ab2698f6591818107989fe53d
       body: |
