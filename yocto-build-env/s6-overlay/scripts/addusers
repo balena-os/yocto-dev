@@ -16,6 +16,7 @@ user_ids="
     majorz:1006
     mtoman:1007
     kb2ma:1008
+    rcooke-warwick:1009
 "
 
 fetch_ssh_keys() {
