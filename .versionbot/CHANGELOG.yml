@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Dockerfile: install mc, byobu and bash-completion"
+      hash: ba1ef3cbc8e2b6b1bb016c04e4598210fb216929
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru
+      nested: []
+  version: 0.0.32
+  title: ""
+  date: 2024-02-09T09:09:40.011Z
+- commits:
     - subject: "addusers: Add Ryan to users"
       hash: 57d78db23d3d40af6c2e47fdfafdf5645adeb76a
       body: |
