@@ -1,4 +1,18 @@
 - commits:
+    - subject: Include pigz package
+      hash: 6f082a9cdeba6fce8400e291e4d1955e73eb3d45
+      body: >
+        This package is useful to first compress a big file before copying it
+        over from the misc servers.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Florin Sarbu
+      nested: []
+  version: 0.0.33
+  title: ""
+  date: 2024-02-09T09:38:16.630Z
+- commits:
     - subject: "Dockerfile: install mc, byobu and bash-completion"
       hash: ba1ef3cbc8e2b6b1bb016c04e4598210fb216929
       body: ""
