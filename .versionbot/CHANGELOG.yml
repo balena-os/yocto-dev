@@ -1,4 +1,18 @@
 - commits:
+    - subject: "yocto-build-env/Dockerfile: Include less, nano"
+      hash: c2f312b4a6ed324bfc8a53cffd31f959871f62d1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 0.0.34
+  title: ""
+  date: 2024-02-16T08:51:58.565Z
+- commits:
     - subject: Include pigz package
       hash: 6f082a9cdeba6fce8400e291e4d1955e73eb3d45
       body: >
