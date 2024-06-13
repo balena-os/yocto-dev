@@ -25,7 +25,7 @@ fetch_ssh_keys() {
     (
         cd "${_home}" || exit 1
         mkdir -p .ssh
-        curl -fsSL "https://github.com/${_username}.keys" >>.ssh/authorized_keys
+        curl -fsSL "https://github.com/${_username}.keys" >.ssh/authorized_keys
         chown -R "${_username}:${_username}" .ssh
         chmod -R 700 .ssh
         echo "Added $(wc -l <.ssh/authorized_keys) SSH keys for ${_username}"
