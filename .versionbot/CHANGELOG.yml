@@ -1,4 +1,17 @@
 - commits:
+    - subject: Always refresh SSH keys
+      hash: a5b4563571bbe65a4583f80e3873fa0e86ef7e02
+      body: |
+        Appending to SSH keys will cause it to grow indefinitely.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 0.0.51
+  title: ""
+  date: 2024-06-13T17:26:30.679Z
+- commits:
     - subject: Update balena-io/balena-cli to v18.2.2
       hash: b47cbf70186a79b9b10d03ef57b026ddd2f60ec7
       body: |
