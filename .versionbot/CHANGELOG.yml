@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v18.2.5
+      hash: fb4f396d9188c2e3ce2f84e113354d0854594bc1
+      body: |
+        Update balena-io/balena-cli from 18.2.2 to 18.2.5
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 0.0.52
+  title: ""
+  date: 2024-06-21T12:39:35.099Z
+- commits:
     - subject: Always refresh SSH keys
       hash: a5b4563571bbe65a4583f80e3873fa0e86ef7e02
       body: |
