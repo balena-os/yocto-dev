@@ -1,4 +1,18 @@
 - commits:
+    - subject: "addusers: Add Jao to users list"
+      hash: f53e68f396567a6bf9a6686c9a2db5ec77d3c16e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru
+      nested: []
+  version: 0.0.58
+  title: ""
+  date: 2024-06-27T07:26:21.198Z
+- commits:
     - subject: Update balena-io/balena-cli to v18.2.10
       hash: f50b9250bb32fabfbd6627cbc9f0eca76b763999
       body: |
