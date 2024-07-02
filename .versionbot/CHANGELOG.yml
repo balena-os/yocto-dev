@@ -1,4 +1,21 @@
 - commits:
+    - subject: "yocto-build-env/Dockerfile: Update to Ubuntu 22.04"
+      hash: 69ea5f06bd7487ff89da12fab2d8fac4357f92c9
+      body: >
+        This update is based on
+
+        https://github.com/balena-os/balena-yocto-scripts/commit/e027c512dbcf801a66a4bb4da15639ca67eedd2e
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 0.0.62
+  title: ""
+  date: 2024-07-02T11:06:20.067Z
+- commits:
     - subject: Update balena-io/balena-cli to v18.2.14
       hash: b4e35b8b1f1832d7ac484304b06686f19638935a
       body: |
