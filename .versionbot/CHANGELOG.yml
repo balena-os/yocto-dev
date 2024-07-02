@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v18.2.12
+      hash: 627e422dee2d6b9a8652f9f7634f1a08f5307854
+      body: |
+        Update balena-io/balena-cli from 18.2.10 to 18.2.12
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 0.0.59
+  title: ""
+  date: 2024-07-02T08:46:52.912Z
+- commits:
     - subject: "addusers: Add Jao to users list"
       hash: f53e68f396567a6bf9a6686c9a2db5ec77d3c16e
       body: ""
