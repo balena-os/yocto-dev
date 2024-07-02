@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v18.2.15
+      hash: 02fadf4bb4c864b1c9de25e303e8dc1a2d4c1a2f
+      body: |
+        Update balena-io/balena-cli from 18.2.14 to 18.2.15
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 0.0.63
+  title: ""
+  date: 2024-07-02T11:40:25.218Z
+- commits:
     - subject: "yocto-build-env/Dockerfile: Update to Ubuntu 22.04"
       hash: 69ea5f06bd7487ff89da12fab2d8fac4357f92c9
       body: >
