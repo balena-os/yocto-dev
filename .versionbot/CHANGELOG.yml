@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v18.2.34
+      hash: 13e3fd31b4acde6d3fad1106770c8105c673b9cd
+      body: |
+        Update balena-io/balena-cli from 18.2.33 to 18.2.34
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.0.81
+  title: ""
+  date: 2024-07-29T12:55:06.789Z
+- commits:
     - subject: Update balena-io/balena-cli to v18.2.33
       hash: bb3ebac996e1e2f3711987956dd0b2d90289aa83
       body: |
