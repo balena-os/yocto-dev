@@ -1,4 +1,14 @@
 - commits:
+    - subject: "patch: Add user shaunmulligan"
+      hash: 055e031c50d54d0ea6b64cd795df04dbdf689a1a
+      body: ""
+      footer: {}
+      author: Kyle Harding
+      nested: []
+  version: 0.0.90
+  title: ""
+  date: 2024-09-12T17:37:47.082Z
+- commits:
     - subject: Update balena-io/balena-cli to v19.0.9
       hash: 3c21b44e7c8c0b6128d7bf81f0a634ab15040ce2
       body: |
