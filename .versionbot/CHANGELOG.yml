@@ -1,4 +1,14 @@
 - commits:
+    - subject: "Patch: add aethernet to misc1/2 users"
+      hash: 87888cc97a64aa9ac335055465b1dde1e569ed7c
+      body: ""
+      footer: {}
+      author: Edwin Joassart
+      nested: []
+  version: 0.0.91
+  title: ""
+  date: 2024-09-12T18:06:56.007Z
+- commits:
     - subject: "patch: Add user shaunmulligan"
       hash: 055e031c50d54d0ea6b64cd795df04dbdf689a1a
       body: ""
