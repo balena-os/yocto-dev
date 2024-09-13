@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v19.0.10
+      hash: 7140abea3878ed22fbc88e96592ef8d99fd3b4cb
+      body: |
+        Update balena-io/balena-cli from 19.0.9 to 19.0.10
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.0.92
+  title: ""
+  date: 2024-09-13T00:00:01.666Z
+- commits:
     - subject: "Patch: add aethernet to misc1/2 users"
       hash: 87888cc97a64aa9ac335055465b1dde1e569ed7c
       body: ""
