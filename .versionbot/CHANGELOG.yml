@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove access for lmbarros
+      hash: 6022d774d20cf82d2883b82ea68d026b726fabcf
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 0.0.96
+  title: ""
+  date: 2024-09-25T22:02:30.253Z
+- commits:
     - subject: Update balena-io/balena-cli to v19.0.13
       hash: 473eb788d9c22086f71ee585c267b6aee89406e7
       body: |
