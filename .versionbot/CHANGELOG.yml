@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v19.0.14
+      hash: 6f8cddc22f74b87db06450ac1360c41c77569a7b
+      body: |
+        Update balena-io/balena-cli from 19.0.13 to 19.0.14
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.0.97
+  title: ""
+  date: 2024-10-08T13:33:01.075Z
+- commits:
     - subject: Remove access for lmbarros
       hash: 6022d774d20cf82d2883b82ea68d026b726fabcf
       body: ""
