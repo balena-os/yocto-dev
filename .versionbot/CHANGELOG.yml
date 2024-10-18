@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v19.9.0
+      hash: df14624d922162df34491f83f9d75356e9fcd202
+      body: |
+        Update balena-io/balena-cli from 19.7.0 to 19.9.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.0.109
+  title: ""
+  date: 2024-10-18T16:03:23.016Z
+- commits:
     - subject: Update balena-io/balena-cli to v19.7.0
       hash: c11fdaa82fa5526829bd561fda5ac2f480831ba0
       body: |
