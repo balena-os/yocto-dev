@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v20.0.7
+      hash: dca0fd6f02a347c3581f9208c86218765983ad1f
+      body: |
+        Update balena-io/balena-cli from 20.0.6 to 20.0.7
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.0.127
+  title: ""
+  date: 2024-11-23T17:54:45.280Z
+- commits:
     - subject: Update balena-io/balena-cli to v20.0.6
       hash: 3a7b9e8da5b523fd02d80ac05f7ab495909d9eae
       body: |
@@ -828,9 +841,8 @@
 - commits:
     - subject: "yocto-build-env/Dockerfile: Update to Ubuntu 22.04"
       hash: 69ea5f06bd7487ff89da12fab2d8fac4357f92c9
-      body: >
+      body: |
         This update is based on
-
         https://github.com/balena-os/balena-yocto-scripts/commit/e027c512dbcf801a66a4bb4da15639ca67eedd2e
       footer:
         Change-type: patch
