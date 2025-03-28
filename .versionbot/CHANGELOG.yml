@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v21.1.3
+      hash: 7ef965350be89c155350044627a4cab5dc7dc1b6
+      body: |
+        Update balena-io/balena-cli from 21.1.2 to 21.1.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.0.149
+  title: ""
+  date: 2025-03-28T18:49:15.218Z
+- commits:
     - subject: Update balena-io/balena-cli to v21.1.2
       hash: 0d2940d4e55959fba7487285a4d59f04da33091f
       body: |
