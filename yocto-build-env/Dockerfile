@@ -18,7 +18,7 @@ RUN apt-get update \
 
 # Set the locale to UTF-8 for bulding with poky morty
 RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
+ENV LANG=en_US.UTF-8
 
 # Additional host packages required by balena
 # hadolint ignore=DL3008
@@ -91,9 +91,9 @@ RUN tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz
 ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-x86_64.tar.xz /tmp
 RUN tar -C / -Jxpf /tmp/s6-overlay-x86_64.tar.xz
 
-ENV S6_KEEP_ENV 1
-ENV S6_READ_ONLY_ROOT 1
-ENV S6_CMD_WAIT_FOR_SERVICES_MAXTIME 0
+ENV S6_KEEP_ENV=1
+ENV S6_READ_ONLY_ROOT=1
+ENV S6_CMD_WAIT_FOR_SERVICES_MAXTIME=0
 
 # install s6-overlay
 COPY s6-overlay /etc/s6-overlay
