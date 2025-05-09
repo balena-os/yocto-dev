@@ -47,7 +47,7 @@ RUN mkdir -p /etc/apt/keyrings \
     && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
 
 # renovate: datasource=github-releases depName=docker/cli extractVersion=^v(?<version>.*)$
-ARG DOCKER_VERSION=27.4.1
+ARG DOCKER_VERSION=20.10.24
 
 # renovate: datasource=github-releases depName=docker/compose extractVersion=^v(?<version>.*)$
 ARG DOCKER_COMPOSE_VERSION=2.35.1
