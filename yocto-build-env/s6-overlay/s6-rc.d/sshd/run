@@ -20,4 +20,5 @@ exec /usr/sbin/sshd -De \
     -o UsePAM=yes \
     -o AcceptEnv="LANG LC_*" \
     -o PrintMotd=no \
-    -o Banner=none
+    -o Banner=none \
+    -o StreamLocalBindUnlink=yes
