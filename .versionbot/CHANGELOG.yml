@@ -1,4 +1,29 @@
 - commits:
+    - subject: Enable automatic removal of stale SSH bind sockets
+      hash: aa076080039f5b8752caa58e5f580e7d6ddab257
+      body: |
+        https://wiki.gnupg.org/AgentForwarding
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Install docker and plugins from official apt repositories
+      hash: 4b65d0662acf93b750a1b220028ce420d00ab92a
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 0.1.0
+  title: ""
+  date: 2025-05-22T13:09:43.224Z
+- commits:
     - subject: Update balena-io/balena-cli to v21.1.11
       hash: 4bd5483818f7bf2e4552e94d5a6a9b2913a3d8a6
       body: |
