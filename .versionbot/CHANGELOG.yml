@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v21.1.14
+      hash: 9fc41984561954af36a01e48a76246786aa6ab50
+      body: |
+        Update balena-io/balena-cli from 21.1.11 to 21.1.14
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.1
+  title: ""
+  date: 2025-05-22T14:45:17.563Z
+- commits:
     - subject: Enable automatic removal of stale SSH bind sockets
       hash: aa076080039f5b8752caa58e5f580e7d6ddab257
       body: |
