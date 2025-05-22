@@ -18,7 +18,7 @@ RUN apt-get update \
 
 # Set the locale to UTF-8 for bulding with poky morty
 RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
+ENV LANG=en_US.UTF-8
 
 # Additional host packages required by balena
 # hadolint ignore=DL3008
@@ -29,7 +29,9 @@ RUN apt-get update \
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # hadolint ignore=DL3008,DL3015
-RUN apt-get update && apt-get install -y jq nodejs npm sudo && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends jq nodejs npm sudo \
+    && rm -rf /var/lib/apt/lists/*
 
 # Additional host packages required by various BSP layers
 # hadolint ignore=DL3008
@@ -37,10 +39,38 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends dos2unix \
     && rm -rf /var/lib/apt/lists/*
 
-# Install docker matching the balena-engine version
+# Add keyring for docker-ce
 # https://docs.docker.com/engine/install/ubuntu/
-# hadolint ignore=DL3008,DL3015
-RUN apt-get update && apt-get install -y iptables procps e2fsprogs xfsprogs xz-utils git kmod apt-transport-https ca-certificates curl gnupg lsb-release docker.io && rm -rf /var/lib/apt/lists/*
+RUN mkdir -p /etc/apt/keyrings \
+    && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg \
+    && chmod a+r /etc/apt/keyrings/docker.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
+
+# renovate: datasource=github-releases depName=docker/cli extractVersion=^v(?<version>.*)$
+ARG DOCKER_VERSION=20.10.24
+
+# renovate: datasource=github-releases depName=docker/compose extractVersion=^v(?<version>.*)$
+ARG DOCKER_COMPOSE_VERSION=2.35.1
+
+# renovate: datasource=github-releases depName=docker/buildx extractVersion=^v(?<version>.*)$
+ARG DOCKER_BUILDX_VERSION=0.23.0
+
+# Install Docker
+# hadolint ignore=DL3008
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        docker-ce=5:${DOCKER_VERSION}* \
+        docker-ce-cli=5:${DOCKER_VERSION}* \
+        containerd.io \
+        docker-buildx-plugin=${DOCKER_BUILDX_VERSION}* \
+        docker-compose-plugin=${DOCKER_COMPOSE_VERSION}* \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install additional utilities
+# hadolint ignore=DL3008
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends iptables procps e2fsprogs xfsprogs xz-utils git kmod \
+    && rm -rf /var/lib/apt/lists/*
 
 VOLUME /var/lib/docker
 
@@ -48,7 +78,7 @@ VOLUME /var/lib/docker
 # renovate: datasource=github-releases depName=balena-io/balena-cli
 ARG BALENA_CLI_VERSION=v21.1.11
 
-RUN curl -fsSL https://github.com/balena-io/balena-cli/releases/download/$BALENA_CLI_VERSION/balena-cli-$BALENA_CLI_VERSION-linux-x64-standalone.zip > balena-cli.zip && \
+RUN curl -fsSL https://github.com/balena-io/balena-cli/releases/download/${BALENA_CLI_VERSION}/balena-cli-${BALENA_CLI_VERSION}-linux-x64-standalone.zip > balena-cli.zip && \
     unzip balena-cli.zip \
     && mv balena-cli/* /usr/bin \
     && rm -rf balena-cli.zip balena-cli
@@ -61,9 +91,9 @@ RUN tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz
 ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-x86_64.tar.xz /tmp
 RUN tar -C / -Jxpf /tmp/s6-overlay-x86_64.tar.xz
 
-ENV S6_KEEP_ENV 1
-ENV S6_READ_ONLY_ROOT 1
-ENV S6_CMD_WAIT_FOR_SERVICES_MAXTIME 0
+ENV S6_KEEP_ENV=1
+ENV S6_READ_ONLY_ROOT=1
+ENV S6_CMD_WAIT_FOR_SERVICES_MAXTIME=0
 
 # install s6-overlay
 COPY s6-overlay /etc/s6-overlay

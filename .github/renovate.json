@@ -1,4 +1,11 @@
 {
   "extends": ["github>balena-io/renovate-config"],
-  "automerge": false
+  "automerge": false,
+  "packageRules": [
+    {
+      "matchPackageNames": ["docker/cli"],
+      "matchUpdateTypes": ["major", "minor"],
+      "enabled": false
+    }
+  ]
 }
