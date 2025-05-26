@@ -76,12 +76,12 @@ VOLUME /var/lib/docker
 
 # Install balena-cli
 # renovate: datasource=github-releases depName=balena-io/balena-cli
-ARG BALENA_CLI_VERSION=v21.1.14
+ARG BALENA_CLI_VERSION=v22.0.0
 
-RUN curl -fsSL https://github.com/balena-io/balena-cli/releases/download/${BALENA_CLI_VERSION}/balena-cli-${BALENA_CLI_VERSION}-linux-x64-standalone.zip > balena-cli.zip && \
-    unzip balena-cli.zip \
-    && mv balena-cli/* /usr/bin \
-    && rm -rf balena-cli.zip balena-cli
+RUN curl -fsSL https://github.com/balena-io/balena-cli/releases/download/${BALENA_CLI_VERSION}/balena-cli-${BALENA_CLI_VERSION}-linux-x64-standalone.tar.gz | tar -xzf - && \
+    cp -a balena /usr/lib/balena && \
+    ln -sf /usr/lib/balena/bin/balena /usr/bin/balena && \
+    balena version
 
 # renovate: datasource=github-releases depName=just-containers/s6-overlay
 ARG S6_OVERLAY_VERSION=3.1.4.2
