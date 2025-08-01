@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker/compose to v2.39.1
+      hash: ac2778797247b8ffba6bcd4bf6d8e660a3e86610
+      body: |
+        Update docker/compose from 2.38.2 to 2.39.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.19
+  title: ""
+  date: 2025-08-01T18:44:12.112Z
+- commits:
     - subject: Update docker/buildx to v0.26.1
       hash: a8e9e060d4232b672059e32990a108d59b95d0e3
       body: |
