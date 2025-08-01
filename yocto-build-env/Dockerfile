@@ -50,7 +50,7 @@ RUN mkdir -p /etc/apt/keyrings \
 ARG DOCKER_VERSION=20.10.24
 
 # renovate: datasource=github-releases depName=docker/compose extractVersion=^v(?<version>.*)$
-ARG DOCKER_COMPOSE_VERSION=2.38.2
+ARG DOCKER_COMPOSE_VERSION=2.39.1
 
 # renovate: datasource=github-releases depName=docker/buildx extractVersion=^v(?<version>.*)$
 ARG DOCKER_BUILDX_VERSION=0.26.1
