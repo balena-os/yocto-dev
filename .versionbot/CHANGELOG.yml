@@ -1,4 +1,18 @@
 - commits:
+    - subject: "addusers: Add ycardaillac to user list"
+      hash: f5cb2feed0129eca6445cd5c792a9946d16cd90a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+        signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+      author: Yann CARDAILLAC
+      nested: []
+  version: 0.1.30
+  title: ""
+  date: 2025-09-04T14:58:27.370Z
+- commits:
     - subject: Update balena-io/balena-cli to v22.4.1
       hash: 7ac8cec036f6eb34867fe350f4d5c56278b1c913
       body: |
