@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker/compose to v2.39.2
+      hash: c2e7ca2eb03342cd4189204655b927c30534e157
+      body: |
+        Update docker/compose from 2.39.1 to 2.39.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.31
+  title: ""
+  date: 2025-09-04T16:51:15.035Z
+- commits:
     - subject: "addusers: Add ycardaillac to user list"
       hash: f5cb2feed0129eca6445cd5c792a9946d16cd90a
       body: ""
