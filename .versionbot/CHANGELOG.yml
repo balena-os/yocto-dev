@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker/buildx to v0.30.1
+      hash: c008aafc9475fd009ff61c51a1b4ab7d952c690a
+      body: |
+        Update docker/buildx from 0.30.0 to 0.30.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.68
+  title: ""
+  date: 2025-12-02T18:58:02.845Z
+- commits:
     - subject: Update balena-io/balena-cli to v23.2.2
       hash: d92006c746257a8f7fdd409dc10b8f087c39a03f
       body: |
