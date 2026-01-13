@@ -76,7 +76,7 @@ VOLUME /var/lib/docker
 
 # Install balena-cli
 # renovate: datasource=github-releases depName=balena-io/balena-cli
-ARG BALENA_CLI_VERSION=v23.2.16
+ARG BALENA_CLI_VERSION=v23.2.17
 
 RUN curl -fsSL https://github.com/balena-io/balena-cli/releases/download/${BALENA_CLI_VERSION}/balena-cli-${BALENA_CLI_VERSION}-linux-x64-standalone.tar.gz | tar -xzf - && \
     cp -a balena /usr/lib/balena && \
