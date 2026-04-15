@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker/compose to v5.1.3
+      hash: 32bca97ebad404e50ffd62ed3511ea2e212f8096
+      body: |
+        Update docker/compose from 5.1.2 to 5.1.3
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.112
+  title: ""
+  date: 2026-04-15T17:09:29.261Z
+- commits:
     - subject: Update docker/compose to v5.1.2
       hash: 512994afa4f2defc23f67dd50748ae87aa348a04
       body: |
