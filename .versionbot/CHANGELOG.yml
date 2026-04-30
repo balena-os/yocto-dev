@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update crazymax/fail2ban Docker tag to v1.1.0
+      hash: 4231ae3089f7709d8300d010b50936b2d826a940
+      body: |
+        Update crazymax/fail2ban from 1.0.2 to 1.1.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.117
+  title: ""
+  date: 2026-04-30T18:24:21.775Z
+- commits:
     - subject: Update Pin dependencies
       hash: a460093a40a25d509606c66a589e8d58f3aaac25
       body: |
