@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update Pin dependencies
+      hash: a460093a40a25d509606c66a589e8d58f3aaac25
+      body: |
+        Update crazymax/fail2ban
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.116
+  title: ""
+  date: 2026-04-30T17:22:01.953Z
+- commits:
     - subject: Update balena-io/balena-cli to v25.1.0
       hash: 8a99f66ca1af772020a6cd4fdddc68db9f1acb0d
       body: |
