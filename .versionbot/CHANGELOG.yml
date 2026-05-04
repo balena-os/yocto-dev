@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v25.1.1
+      hash: c0ba8dedcd68f6da3b3e045b63c202dc67b84c8a
+      body: |
+        Update balena-io/balena-cli from 25.1.0 to 25.1.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.118
+  title: ""
+  date: 2026-05-04T17:27:15.601Z
+- commits:
     - subject: Update crazymax/fail2ban Docker tag to v1.1.0
       hash: 4231ae3089f7709d8300d010b50936b2d826a940
       body: |
