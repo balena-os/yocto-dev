@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update ubuntu:22.04 Docker digest to 4f838ad
+      hash: 0a2ab82c7efb8ca88cf00118aecda112f5b227a6
+      body: |
+        Update ubuntu
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.126
+  title: ""
+  date: 2026-05-16T22:56:51.188Z
+- commits:
     - subject: Update crazymax/fail2ban:1.1.0 Docker digest to 7cd8a42
       hash: 1a644617a58cbb5b182d9177429605b04bb9d429
       body: |
