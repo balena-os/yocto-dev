@@ -1,4 +1,18 @@
 - commits:
+    - subject: "addusers: Add samuel-duffield1 to the users list"
+      hash: 4b7c18bebd7976f1851c24549a890800afe53a2c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru
+      nested: []
+  version: 0.1.127
+  title: ""
+  date: 2026-05-20T07:55:58.243Z
+- commits:
     - subject: Update ubuntu:22.04 Docker digest to 4f838ad
       hash: 0a2ab82c7efb8ca88cf00118aecda112f5b227a6
       body: |
