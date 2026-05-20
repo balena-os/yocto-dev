@@ -20,6 +20,7 @@ user_ids="
     shaunmulligan:1011
     aethernet:1012
     ycardaillac:1013
+    samuel-duffield1:1014
 "
 
 fetch_ssh_keys() {
