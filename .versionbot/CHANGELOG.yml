@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add guille-vega user with UID 1005
+      hash: 6f3b93557b4ac89c333da27e95bbe7ddcb23d2df
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 0.1.128
+  title: ""
+  date: 2026-06-03T16:09:57.737Z
+- commits:
     - subject: "addusers: Add samuel-duffield1 to the users list"
       hash: 4b7c18bebd7976f1851c24549a890800afe53a2c
       body: ""
