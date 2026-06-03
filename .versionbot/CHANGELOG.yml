@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker/buildx to v0.34.1
+      hash: 0c06309e781314d678e13582aeeb00b8051a95e9
+      body: |
+        Update docker/buildx from 0.34.0 to 0.34.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.130
+  title: ""
+  date: 2026-06-03T16:36:00.602Z
+- commits:
     - subject: Remove users from addusers script
       hash: d97f2b23a746fd81465bec51c11891845c1a7fea
       body: |
