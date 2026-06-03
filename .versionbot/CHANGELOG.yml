@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove users from addusers script
+      hash: d97f2b23a746fd81465bec51c11891845c1a7fea
+      body: |
+        Removed users 'jakogut' and 'majorz' from user_ids list.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 0.1.129
+  title: ""
+  date: 2026-06-03T16:14:18.299Z
+- commits:
     - subject: Add guille-vega user with UID 1005
       hash: 6f3b93557b4ac89c333da27e95bbe7ddcb23d2df
       body: ""
