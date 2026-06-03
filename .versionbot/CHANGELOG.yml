@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v25.1.7
+      hash: 5da02af116c4eda0cf6d67b01363e603683264d6
+      body: |
+        Update balena-io/balena-cli from 25.1.6 to 25.1.7
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.131
+  title: ""
+  date: 2026-06-03T20:34:40.009Z
+- commits:
     - subject: Update docker/buildx to v0.34.1
       hash: 0c06309e781314d678e13582aeeb00b8051a95e9
       body: |
