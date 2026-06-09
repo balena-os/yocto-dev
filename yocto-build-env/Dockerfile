@@ -13,7 +13,7 @@ RUN apt-get update \
     texinfo unzip wget xterm cpio file python3 openssh-client iputils-ping iproute2 \
     python3-distutils python3-pip python3-pexpect python3-git python3-jinja2 python3-subunit \
     gawk socat xz-utils libegl1-mesa libsdl1.2-dev pylint mesa-common-dev debianutils vim sharutils rsync \
-    mc byobu bash-completion pigz less nano \
+    mc byobu bash-completion pigz less nano quilt \
     && rm -rf /var/lib/apt/lists/*
 
 # Set the locale to UTF-8 for bulding with poky morty
