@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add rahul-thakoor user with uid 1015
+      hash: 41e6fffbef48651eecc3c5ee4f2adc2311bd1424
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Rahul Thakoor
+      nested: []
+  version: 0.1.134
+  title: ""
+  date: 2026-07-02T13:47:07.152Z
+- commits:
     - subject: Update balena-io/balena-cli to v25.1.8
       hash: a5d8be04dfda2fed9e4214dadfa66e53964f5f5b
       body: |
