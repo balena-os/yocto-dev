@@ -39,6 +39,13 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends dos2unix \
     && rm -rf /var/lib/apt/lists/*
 
+# Claude Code sandbox dependencies
+# https://code.claude.com/docs/en/sandboxing
+# hadolint ignore=DL3008
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends bubblewrap socat \
+    && rm -rf /var/lib/apt/lists/*
+
 # Add keyring for docker-ce
 # https://docs.docker.com/engine/install/ubuntu/
 RUN mkdir -p /etc/apt/keyrings \
