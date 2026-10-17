@@ -1,7 +1,7 @@
 # yocto build environment, adapted from
 # https://github.com/balena-os/balena-yocto-scripts/blob/a880342e40fe05d00a0f1cf2582a0699921152e0/automation/Dockerfile_yocto-build-env
 
-FROM ubuntu:22.04@sha256:4f838adc7181d9039ac795a7d0aba05a9bd9ecd480d294483169c5def983b64d
+FROM ubuntu:24.04@sha256:68ee22004a9109b44973313b02ff7b1de250f1de0f5ecb628d73f579aaff33ac
 
 ENV DEBIAN_FRONTEND=noninteractive
 
