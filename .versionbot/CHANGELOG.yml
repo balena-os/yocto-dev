@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update crazymax/fail2ban Docker tag to v1.1.1
+      hash: b9a6fcc7d82f991416ab392b8c3b52534fe04b9c
+      body: |
+        Update crazymax/fail2ban from 1.1.0 to 1.1.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.137
+  title: ""
+  date: 2026-10-21T21:23:34.015Z
+- commits:
     - subject: Update flowzonify to v0.4.21
       hash: 9819c0c86b118ef003f6573f52dc6cd94ef1727a
       body: |
