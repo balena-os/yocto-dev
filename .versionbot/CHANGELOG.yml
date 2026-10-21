@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update flowzonify to v0.4.21
+      hash: 9819c0c86b118ef003f6573f52dc6cd94ef1727a
+      body: |
+        Update flowzonify from 0.0.0 to 0.4.21
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.136
+  title: ""
+  date: 2026-10-21T19:27:13.171Z
+- commits:
     - subject: Install Claude Code sandbox dependencies
       hash: f91778cdb666970848531e7d3de2de659697d052
       body: |
