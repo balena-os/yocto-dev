@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update ubuntu:22.04 Docker digest to 0a98879
+      hash: 2927c7aceba31d97e95c46340d07267a21d1698d
+      body: |
+        Update ubuntu
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.139
+  title: ""
+  date: 2026-10-22T02:14:22.952Z
+- commits:
     - subject: Update balena-io/balena-cli to v25.2.7
       hash: bcb2a7a072b952be61501b91fc0224311d1956f3
       body: |
