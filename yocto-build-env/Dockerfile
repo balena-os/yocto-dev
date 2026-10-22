@@ -60,7 +60,7 @@ ARG DOCKER_VERSION=20.10.24
 ARG DOCKER_COMPOSE_VERSION=5.6.1
 
 # renovate: datasource=github-releases depName=docker/buildx extractVersion=^v(?<version>.*)$
-ARG DOCKER_BUILDX_VERSION=0.34.1
+ARG DOCKER_BUILDX_VERSION=0.38.1
 
 # Install Docker
 # hadolint ignore=DL3008
