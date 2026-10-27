@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update ubuntu:22.04 Docker digest to e0f80c8
+      hash: 9f7b146a21e87fd6302f7bdf95d0768db979dbca
+      body: |
+        Update ubuntu
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.141
+  title: ""
+  date: 2026-10-27T09:16:23.224Z
+- commits:
     - subject: Update docker/compose to v5.6.1
       hash: 6f955ae7907beac3ad758be5021969fd84df2da5
       body: |
