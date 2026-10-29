@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update ubuntu:22.04 Docker digest to 076e7bf
+      hash: 5f4f7fb0288e51e05d3a78b3745b54e2e65c05b5
+      body: |
+        Update ubuntu
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.142
+  title: ""
+  date: 2026-10-29T05:01:53.503Z
+- commits:
     - subject: Update ubuntu:22.04 Docker digest to e0f80c8
       hash: 9f7b146a21e87fd6302f7bdf95d0768db979dbca
       body: |
