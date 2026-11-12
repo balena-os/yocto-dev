@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker/compose to v5.7.1
+      hash: 0cb181b932ba7ce12ebe68895a7cf4d334ee3d41
+      body: |
+        Update docker/compose from 5.7.0 to 5.7.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.147
+  title: ""
+  date: 2026-11-12T05:01:42.751Z
+- commits:
     - subject: Update ubuntu:22.04 Docker digest to 74b12b1
       hash: 992cbf44e7469ac11840461b7860e57022061b1b
       body: |
