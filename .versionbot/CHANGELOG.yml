@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v25.2.21
+      hash: 9c15443963a82d3c51fb050ddd85e905e0fa5d48
+      body: |
+        Update balena-io/balena-cli from 25.2.20 to 25.2.21
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.157
+  title: ""
+  date: 2026-11-17T15:19:17.923Z
+- commits:
     - subject: Update docker/compose to v5.7.2
       hash: 4b093512edbfd70a354ee2ffcd17f7c6899fd1f1
       body: |
