@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-io/balena-cli to v25.2.33
+      hash: fa583bcfa10bf221af3dddee488eadeeb3e8ab76
+      body: |
+        Update balena-io/balena-cli from 25.2.32 to 25.2.33
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.172
+  title: ""
+  date: 2026-11-20T15:08:56.423Z
+- commits:
     - subject: Update ubuntu:22.04 Docker digest to f64b2ff
       hash: 591d304dd6e2ab18699a1078decf3c3b47925c98
       body: |
