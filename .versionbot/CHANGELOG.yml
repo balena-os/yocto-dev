@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update docker/compose to v5.8.1
+      hash: 0b3b80c8f936af05b77473ee64ea103dbffde8ee
+      body: |
+        Update docker/compose from 5.8.0 to 5.8.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.182
+  title: ""
+  date: 2026-11-27T15:15:27.926Z
+- commits:
     - subject: Update balena-io/balena-cli to v25.2.44
       hash: c478c8e2372ec11663c11d458fbf8c696fed9d35
       body: |
